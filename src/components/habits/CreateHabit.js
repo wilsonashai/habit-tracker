@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createHabit } from '../../store/actions/habitActions';
+import moment from 'moment';
 
 class CreateHabit extends Component {
     constructor(props) {
@@ -7,8 +10,12 @@ class CreateHabit extends Component {
         this.state = {
             name: '',
             cadence: '',
-            startDate: new Date(),
+            startDate: moment().format('YYYY-MM-DD'),
+            daysComplete: 0,
+            trackedDays: []
         }
+
+        this.initTrackedDaysArr = this.initTrackedDaysArr.bind(this);
     }
 
     handleChange = (e) => {
@@ -19,7 +26,22 @@ class CreateHabit extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        this.initTrackedDaysArr();
+        this.props.createHabit(this.state);
+    }
+
+    initTrackedDaysArr() {
+        const today = moment();
+        const totalDays = this.state.cadence === 'WEEKLY'? 7 : 30;
+
+        for(var i = 0; i < totalDays; i++) {
+            this.state.trackedDays.push({
+                date: today.format('YYYY-MM-DD'),
+                completed: false
+            });
+
+            today.add(1, 'day');
+        }
     }
 
     render() {
@@ -32,9 +54,9 @@ class CreateHabit extends Component {
                         <input type="text" id="name" onChange={this.handleChange}/>
                     </div>
                     <div>
-                        <label htmlFor="password">At what cadence would you like to track your habit? </label>
-                        <input type="radio" id="cadence" value="WEEKLY" onChange={this.handleChange}/>Weekly 
-                        <input type="radio" id="cadence" value="MONTHLY" onChange={this.handleChange}/>Monthly
+                        <label htmlFor="cadence">At what cadence would you like to track your habit? </label>
+                        <input type="radio" name="cadence" id="cadence" value="WEEKLY" onChange={this.handleChange}/>Weekly 
+                        <input type="radio" name="cadence" id="cadence" value="MONTHLY" onChange={this.handleChange}/>Monthly
                     </div>
                     <div>
                         <button>Create</button>
@@ -45,4 +67,10 @@ class CreateHabit extends Component {
     }
 }
 
-export default CreateHabit ;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createHabit: (habit) => dispatch(createHabit(habit))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CreateHabit);

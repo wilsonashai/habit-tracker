@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Dashboard from './components/dashboard/Dashboard';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import CreateHabit from './components/habits/CreateHabit';
@@ -11,7 +12,8 @@ class App extends Component {
         <div>
         <h1>HABIT TRAKR</h1>
           <Switch>
-            <Route path ='/project/:id' />
+            <Route exact path='/' component={Dashboard}/>
+            <Route path ='/project/:id'/>
             <Route path='/signin' component={SignIn}/>
             <Route path='/signup' component={SignUp}/>
             <Route path='/createHabit' component={CreateHabit}/>

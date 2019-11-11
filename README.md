@@ -1,5 +1,6 @@
 # habit-tracker
-A habit tracker app – for those of us who like to analyze ourselves on a weekly or monthly basis.
+A habit tracker app – for those of us who like to analyze habits on a consisten cadence.
+Created by Asha Wilson.
 
 ## Available Scripts
 
