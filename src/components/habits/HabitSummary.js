@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 
 const HabitSummary = ({habit}) => {
@@ -6,7 +7,7 @@ const HabitSummary = ({habit}) => {
     return (
         <div className="habit-list section">
             <div className="habit-card">
-                <h4>{habit.name}</h4>
+                <Link to={'/habit/' + habit.id}><h4>{habit.name}</h4></Link>
                 <p>Cadence: {habit.cadence}</p>
                 <p>Start Date: {startDate}</p>
             </div>
