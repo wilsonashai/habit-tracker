@@ -9,9 +9,11 @@ class Dashboard extends Component {
         const { habits } = this.props;
 
         return (
-            <div className="dashboard container">
+            <div id="dashboard">
                 <h3>Your Tracked Habits</h3>
-                <HabitList habits={habits}/>
+                <div class="flex-group">
+                    <HabitList habits={habits}/>
+                </div>
             </div>
         )
     }

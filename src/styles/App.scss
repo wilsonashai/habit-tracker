@@ -1,0 +1,71 @@
+@import './colors';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+.App {
+    background-color: $off-white;
+    width: 100%;
+}
+
+.flex-group {
+    display: flex;
+}
+
+.logo {
+    font-family: futura;
+    padding: 0 1em;
+    font-size: 32px;
+    span {
+        font-weight: 300;
+    }
+}
+
+#nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between; 
+
+    a {
+        text-decoration: none;
+        color: $grey-3;
+        font-family: 'Open Sans', Avant Garde, Avantgarde, sans-serif;
+        font-weight: 600;
+        letter-spacing: .25px;
+        text-transform: lowercase;
+        font-size: 14px;
+    }
+
+    a:hover {
+        color: $rust-3;
+        font-weight: 600;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+      
+    li {
+        padding: 12px;
+        margin: 0 15px;
+        font-weight: 600;
+    }
+  }
+
+  .outside-container {
+    padding: 2em 1.5em;
+  }
+  
+  .main-container {
+    margin: 0 auto;
+    background-color: white;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px hsla(0,0%,0%,.2);//0px 0px 3px 0px rgba(172, 172, 172, 0.5);
+    max-width: 975px;
+    min-height: 500px;
+    padding: 1em;
+  }
+  
