@@ -16,6 +16,7 @@ class CreateHabit extends Component {
         }
 
         this.initTrackedDaysArr = this.initTrackedDaysArr.bind(this);
+        this.validateInput = this.validateInput.bind(this);
     }
 
     handleChange = (e) => {
@@ -26,8 +27,16 @@ class CreateHabit extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.initTrackedDaysArr();
-        this.props.createHabit(this.state);
+        if (!this.validateInput()) {
+            this.initTrackedDaysArr();
+            this.props.createHabit(this.state);
+        } else {
+            console.log('ERROR');
+        }
+    }
+
+    validateInput() {
+        return this.state.name === '' || this.state.candence === '';
     }
 
     initTrackedDaysArr() {
@@ -46,7 +55,7 @@ class CreateHabit extends Component {
 
     render() {
         return (
-            <div>
+            <div id="create-form" className="flex-group">
                 <form onSubmit={this.handleSubmit}>
                     <h3>Let's get started by creating a new habit to track!</h3>
                     <div>
@@ -58,8 +67,8 @@ class CreateHabit extends Component {
                         <input type="radio" name="cadence" id="cadence" value="WEEKLY" onChange={this.handleChange}/>Weekly 
                         <input type="radio" name="cadence" id="cadence" value="MONTHLY" onChange={this.handleChange}/>Monthly
                     </div>
-                    <div>
-                        <button>Create</button>
+                    <div className="flex-group">
+                        <button className="btn positive-btn">Create</button>
                     </div>
                 </form>
             </div>
