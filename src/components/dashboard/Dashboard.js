@@ -8,14 +8,20 @@ class Dashboard extends Component {
     render() {
         const { habits } = this.props;
 
-        return (
-            <div id="dashboard">
-                <h3>Your Tracked Habits</h3>
-                <div class="flex-group">
-                    <HabitList habits={habits}/>
+        if(habits) {
+            return (
+                <div id="dashboard">
+                    <h3>Your Tracked Habits</h3>
+                    <div class="flex-group">
+                        <HabitList habits={habits}/>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        } else {
+            return (
+                <div><h3>Loading your dashboard...</h3></div>
+            )
+        }
     }
 }
 

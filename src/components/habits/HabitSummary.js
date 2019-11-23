@@ -7,7 +7,7 @@ const HabitSummary = ({habit}) => {
     return (
         <div className="habit-list section">
             <div className="habit-card">
-                <Link to={'/habit/' + habit.id}><h4>{habit.name}</h4></Link>
+                <Link to={'/habit/' + habit.id} key={habit.id}><h4>{habit.name}</h4></Link>
                 <p>Cadence: {habit.cadence}</p>
                 <p>Start Date: {startDate}</p>
             </div>
