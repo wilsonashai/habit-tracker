@@ -1,5 +1,5 @@
 # habit-tracker
-A habit tracker web application – for those of us who like to analyze habits on a consistent cadence.
+A habit tracker web application – for those of us who like to analyze our habits on a consistent cadence.
 
 Created by Asha Wilson. Written in Javascript (React, Redux) and using Google Firebase for database and hosting. Custom styling created using Sass.
 
@@ -8,7 +8,6 @@ Created by Asha Wilson. Written in Javascript (React, Redux) and using Google Fi
 _(This project is actively being worked on. Status will be updated once MVP is complete)_
 <br />
 ______
-<br />
 
 ## Available Scripts
 
