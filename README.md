@@ -1,6 +1,14 @@
 # habit-tracker
-A habit tracker app – for those of us who like to analyze habits on a consisten cadence.
-Created by Asha Wilson.
+A habit tracker web application – for those of us who like to analyze habits on a consistent cadence.
+
+Created by Asha Wilson. Written in Javascript (React, Redux) and using Google Firebase for database and hosting. Custom styling created using Sass.
+
+## Project Status
+**WIP**<br />
+_(This project is actively being worked on. Status will be updated once MVP is complete)_
+<br />
+______
+<br />
 
 ## Available Scripts
 
@@ -11,15 +19,6 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
