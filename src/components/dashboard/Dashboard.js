@@ -12,7 +12,7 @@ class Dashboard extends Component {
             return (
                 <div id="dashboard">
                     <h3>Your Tracked Habits</h3>
-                    <div class="flex-group">
+                    <div className="flex-group">
                         <HabitList habits={habits}/>
                     </div>
                 </div>
