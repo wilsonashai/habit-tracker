@@ -3,6 +3,7 @@ import HabitList from '../habits/HabitList';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import '../../styles/partials/_dashboard.scss';
 
 class Dashboard extends Component {
     render() {
@@ -11,15 +12,15 @@ class Dashboard extends Component {
         if(habits) {
             return (
                 <div id="dashboard">
-                    <h3>Your Tracked Habits</h3>
-                    <div className="flex-group">
+                    <h1 className="header-1">Your Tracked Habits</h1>
+                    <div className="flex-group content-center">
                         <HabitList habits={habits}/>
                     </div>
                 </div>
             )
         } else {
             return (
-                <div><h3>Loading your dashboard...</h3></div>
+                <div><h2>Loading your dashboard...</h2></div>
             )
         }
     }

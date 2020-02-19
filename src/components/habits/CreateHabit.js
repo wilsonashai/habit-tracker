@@ -70,7 +70,7 @@ class CreateHabit extends Component {
         return (
             <div id="create-form" className="flex-group">
                 <form>
-                    <h3>Let's get started by creating a new habit to track!</h3>
+                    <h1 className="header-2">Let's get started by creating a new habit to track!</h1>
                     <div>
                         <label htmlFor="name">What daily habit would you like to track? </label>
                         <input type="text" id="name" onChange={this.handleChange}/>
@@ -80,7 +80,7 @@ class CreateHabit extends Component {
                         <input type="radio" name="cadence" id="cadence" value="WEEKLY" onChange={this.handleChange}/>Weekly 
                         <input type="radio" name="cadence" id="cadence" value="MONTHLY" onChange={this.handleChange}/>Monthly
                     </div>
-                    <div className="flex-group">
+                    <div className="flex-group content-space-between">
                         <button className="btn neutral-btn" onClick={this.handleCancel}>Cancel</button>
                         <button className="btn positive-btn" onClick={this.handleSubmit}>Create</button>
                     </div>

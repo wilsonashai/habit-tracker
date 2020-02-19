@@ -11,6 +11,14 @@
     display: flex;
 }
 
+.content-space-between {
+  justify-content: space-between;
+}
+
+.content-center {
+  justify-content: center;
+}
+
 .logo {
     font-family: futura;
     padding: 0 .75em;
@@ -18,6 +26,20 @@
     span {
         font-weight: 300;
     }
+}
+
+.header-1 {
+  font-size: 32px;
+  color: $dark-grey;
+}
+
+.header-2 {
+  font-size: 24px;
+  color: $dark-grey;
+}
+
+.header-3 {
+  font-size: 16px;
 }
 
 #nav {
@@ -77,6 +99,18 @@
     max-width: 975px;
     min-height: 500px;
     padding: 1.5em;
+    font-family: 'Open Sans', Avant Garde, Avantgarde, sans-serif;
+
+  }
+
+  .main-container a {
+    color: $green-5;
+    text-decoration: none;
+  }
+
+  .main-container a:hover {
+    color: $rust-3;
+    text-decoration: underline;
   }
 
   .btn {
@@ -107,10 +141,21 @@
   }
 
   .neutral-btn:hover {
-      background-color: $grey-1;
+    background-color: $grey-1;
   }
 
   #create-form {
-      justify-content: center;
+    justify-content: center;
+    min-height: inherit;
   }
+
+  @media only screen and (max-width: 767px) {
+    .main-container {
+      padding: 1em;
+    }
+
+    .outside-container {
+      padding: 1em 1.25em 2em 1em;
+    }
+}
   

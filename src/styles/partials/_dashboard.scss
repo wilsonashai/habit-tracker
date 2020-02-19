@@ -1,0 +1,26 @@
+@import './../colors';
+
+#dashboard {
+    padding: 0 1em;
+}
+
+.habit-list {
+    border-bottom: .5px solid #b9b7b7;
+    width: 100%;
+}
+
+.habit-list h3 {
+    text-transform: lowercase;
+}
+
+.habit-detail {
+    margin-block-end: .75em;
+    font-size: 14px;
+    color: $grey-3;
+}
+
+@media only screen and (max-width: 767px) {
+    #dashboard {
+        padding: 0 0;
+    }
+}

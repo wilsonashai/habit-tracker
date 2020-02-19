@@ -5,12 +5,11 @@ import { firestoreConnect } from 'react-redux-firebase';
 import PropTypes from 'prop-types';
 
 const HabitDetails = (props) => {
-    console.log('rendering...');
     const { habit } = props;
     if (habit) {
         return (
             <div className="habit-details">
-                <h3>{habit.name}</h3>
+                <h1>{habit.name}</h1>
                 <div className="detail-info">
                     <label>Cadence</label>
                     <p>{habit.cadence}</p>
